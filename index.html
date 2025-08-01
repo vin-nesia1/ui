@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UUID GENERATOR - Generate UUID Online Gratis | Vinnesia</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Generate UUID online gratis dengan UUID GENERATOR. Buat UUID v1, v4, v5 dan GUID dengan mudah. Tool UUID generator terbaik untuk developer dan programmer.">
+    <meta name="keywords" content="uuid generator, generate uuid, uuid online, buat uuid, uuid gratis, guid generator, uuid v4, uuid v1, random uuid">
+    <meta name="author" content="VIN NESIA">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="UUID GENERATOR - Generate UUID Online Gratis">
+    <meta property="og:description" content="Generate UUID online gratis dengan UUID GENERATOR. Buat UUID v1, v4, v5 dan GUID dengan mudah untuk kebutuhan development.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://uuid.vinnesia.my.id">
+    <meta property="og:image" content="https://uuid.vinnesia.my.id/logo.png">
+    <meta property="og:site_name" content="VIN NESIA">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="UUID GENERATOR - Generate UUID Online Gratis">
+    <meta name="twitter:description" content="Generate UUID online gratis dengan UUID GENERATOR. Buat UUID v1, v4, v5 dan GUID dengan mudah untuk kebutuhan development.">
+    <meta name="twitter:image" content="https://uuid.vinnesia.my.id/logo.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://uuid.vinnesia.my.id">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/logo.png">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3PYZXZFNER"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3PYZXZFNER');
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #2d1b69 0%, #11998e 50%, #38ef7d 100%);
+            min-height: 100vh;
+            color: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 0;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: #2d1b69;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #ffd700, #38ef7d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .generator-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .input-group {
+            margin-bottom: 25px;
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #ffd700;
+            font-size: 1.1rem;
+        }
+        
+        .input-group select,
+        .input-group input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.15);
+            color: #fff;
+            font-size: 16px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .input-group select:focus,
+        .input-group input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.25);
+            border-color: #ffd700;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+        
+        .input-group input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .input-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .generate-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(45deg, #8b5a2b, #ffd700);
+            color: #2d1b69;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        
+        .generate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+        }
+        
+        .bulk-btn {
+            background: linear-gradient(45deg, #11998e, #38ef7d);
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        
+        .bulk-btn:hover {
+            background: linear-gradient(45deg, #38ef7d, #11998e);
+        }
+        
+        .clear-btn {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            width: 100%;
+        }
+        
+        .clear-btn:hover {
+            background: linear-gradient(45deg, #c0392b, #e74c3c);
+        }
+        
+        .result-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            margin-top: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            color: #2d1b69;
+        }
+        
+        .uuid-item {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+        
+        .uuid-item:hover {
+            border-color: #11998e;
+            box-shadow: 0 5px 15px rgba(17, 153, 142, 0.2);
+        }
+        
+        .uuid-text {
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            font-weight: bold;
+            color: #2d1b69;
+            word-break: break-all;
+            flex: 1;
+            margin-right: 15px;
+        }
+        
+        .copy-btn {
+            background: linear-gradient(45deg, #11998e, #38ef7d);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            min-width: 80px;
+        }
+        
+        .copy-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(17, 153, 142, 0.4);
+        }
+        
+        .copy-btn.copied {
+            background: linear-gradient(45deg, #27ae60, #2ecc71);
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .stat-item {
+            background: rgba(17, 153, 142, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(17, 153, 142, 0.3);
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #11998e;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .info-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .info-section h3 {
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .info-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .info-section ul li {
+            padding: 8px 0;
+            color: rgba(255, 255, 255, 0.9);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .info-section ul li:last-child {
+            border-bottom: none;
+        }
+        
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 50px 0 20px;
+            margin-top: 60px;
+            backdrop-filter: blur(15px);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .footer-section h3 {
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-section ul li a {
+            color: #8b5cf6;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .footer-section ul li a:hover {
+            color: #ffd700;
+            transform: translateX(5px);
+        }
+        
+        .footer-section.email ul li a {
+            color: #38ef7d;
+            text-decoration: underline;
+        }
+        
+        .footer-section.email ul li a:hover {
+            color: #11998e;
+        }
+        
+        .footer-section.social ul li a {
+            color: #ffd700;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding: 30px 20px 0;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .home-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #8b5cf6, #a855f7);
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            margin: 20px auto;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .home-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(139, 92, 246, 0.4);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .generator-card {
+                padding: 25px;
+            }
+            
+            .input-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .uuid-item {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
+            
+            .uuid-text {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .generator-card {
+                padding: 20px;
+            }
+            
+            .generate-btn {
+                font-size: 1rem;
+            }
+        }
+        
+        .icon {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">UUID</div>
+            <h1>UUID GENERATOR</h1>
+            <p>Generate UUID (Universally Unique Identifier) online gratis dengan mudah. Mendukung UUID v1, v4, v5 dan GUID untuk kebutuhan development Anda.</p>
+        </header>
+        
+        <div class="generator-card">
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="uuidVersion">Versi UUID</label>
+                    <select id="uuidVersion">
+                        <option value="v4">UUID v4 (Random)</option>
+                        <option value="v1">UUID v1 (Time-based)</option>
+                        <option value="v5">UUID v5 (Name-based SHA-1)</option>
+                        <option value="guid">GUID (Microsoft)</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="uuidCount">Jumlah UUID</label>
+                    <select id="uuidCount">
+                        <option value="1">1 UUID</option>
+                        <option value="5">5 UUID</option>
+                        <option value="10">10 UUID</option>
+                        <option value="25">25 UUID</option>
+                        <option value="50">50 UUID</option>
+                        <option value="100">100 UUID</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="input-group" id="namespaceGroup" style="display: none;">
+                <label for="namespace">Namespace (untuk UUID v5)</label>
+                <input type="text" id="namespace" placeholder="Masukkan namespace untuk UUID v5" value="6ba7b810-9dad-11d1-80b4-00c04fd430c8">
+            </div>
+            
+            <div class="input-group" id="nameGroup" style="display: none;">
+                <label for="name">Name (untuk UUID v5)</label>
+                <input type="text" id="name" placeholder="Masukkan nama untuk UUID v5" value="example">
+            </div>
+            
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="caseFormat">Format Huruf</label>
+                    <select id="caseFormat">
+                        <option value="lower">lowercase</option>
+                        <option value="upper">UPPERCASE</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="hyphenFormat">Format Hyphen</label>
+                    <select id="hyphenFormat">
+                        <option value="true">Dengan Hyphen (-)</option>
+                        <option value="false">Tanpa Hyphen</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button class="generate-btn" onclick="generateUUID()">
+                🎯 Generate UUID
+            </button>
+            
+            <button class="generate-btn bulk-btn" onclick="generateBulkUUID()">
+                📦 Generate Bulk UUID
+            </button>
+            
+            <button class="generate-btn clear-btn" onclick="clearResults()">
+                🗑️ Clear Results
+            </button>
+        </div>
+        
+        <div class="result-card" id="resultCard" style="display: none;">
+            <h2>UUID Generated Successfully!</h2>
+            <div id="uuidResults"></div>
+            
+            <div class="stats" id="statsSection" style="display: none;">
+                <div class="stat-item">
+                    <div class="stat-number" id="totalGenerated">0</div>
+                    <div class="stat-label">Total Generated</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="totalCopied">0</div>
+                    <div class="stat-label">Total Copied</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="sessionTime">0s</div>
+                    <div class="stat-label">Session Time</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <h3>📋 Tentang UUID</h3>
+            <ul>
+                <li><strong>UUID v1:</strong> Time-based UUID menggunakan timestamp dan MAC address</li>
+                <li><strong>UUID v4:</strong> Random UUID yang paling umum digunakan</li>
+                <li><strong>UUID v5:</strong> Name-based UUID menggunakan SHA-1 hash</li>
+                <li><strong>GUID:</strong> Globally Unique Identifier format Microsoft</li>
+                <li><strong>Format:</strong> 8-4-4-4-12 karakter heksadesimal (contoh: 550e8400-e29b-41d4-a716-446655440000)</li>
+            </ul>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z"/>
+                    </svg>
+                    Navigasi
+                </h3>
+                <ul>
+                    <li><a href="https://www.vinnesia.my.id">🏠 Homepage</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3M19 19H5V5H19V19Z"/>
+                    </svg>
+                    Bantuan
+                </h3>
+                <ul>
+                    <li><a href="#cara-pakai">📖 Cara Pakai Tools</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22 22 17.52 22 12 17.52 2 12 2M12 20C7.59 20 4 16.41 4 12S7.59 4 12 4 20 7.59 20 12 16.41 20 12 20M15.5 11H13V7H11V11H8.5L12 14.5L15.5 11Z"/>
+                    </svg>
+                    Legal
+                </h3>
+                <ul>
+                    <li><a href="#privacy">⚖️ Privacy Policy</a></li>
+                    <li><a href="#terms">⚖️ Terms of Service</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section email">
+                <h3>
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4Z"/>
+                    </svg>
+                    Email
+                </h3>
+                <ul>
+                    <li><a href="mailto:admin@vinnesia.my.id">📧 admin@vinnesia.my.id</a></li>
+                    <li><a href="mailto:support@vinnesia.my.id">📧 support@vinnesia.my.id</a></li>
+                    <li><a href="mailto:privacy@vinnesia.my.id">📧 privacy@vinnesia.my.id</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section social">
+                <h3>
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M5 3H19A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3M9.5 9A1.5 1.5 0 1 0 11 10.5A1.5 1.5 0 0 0 9.5 9M12 4A8 8 0 1 1 4 12A8 8 0 0 1 12 4Z"/>
+                    </svg>
+                    Media Sosial
+                </h3>
+                <ul>
+                    <li><a href="#instagram">📷 Instagram</a></li>
+                    <li><a href="#whatsapp">💬 WhatsApp</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="https://www.vinnesia.my.id" class="home-btn">🏠 Visit Homepage</a>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 VIN NESIA. All rights reserved. Built with ❤️ for everyone.</p>
+        </div>
+    </footer>
+    
+    <script>
+        let totalGenerated = 0;
+        let totalCopied = 0;
+        let sessionStartTime = Date.now();
+        
+        // UUID Generation Functions
+        function generateUUID_v4() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                const r = Math.random() * 16 | 0;
+                const v = c == 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+        
+        function generateUUID_v1() {
+            let d = new Date().getTime();
+            let d2 = (performance && performance.now && (performance.now() * 1000)) || 0;
+            return 'xxxxxxxx-xxxx-1xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                let r = Math.random() * 16;
+                if (d > 0) {
+                    r = (d + r) % 16 | 0;
+                    d = Math.floor(d / 16);
+                } else {
+                    r = (d2 + r) % 16 | 0;
+                    d2 = Math.floor(d2 / 16);
+                }
+                return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+            });
+        }
+        
+        function generateUUID_v5(namespace, name) {
+            // Simplified UUID v5 implementation
+            const hash = simpleHash(namespace + name);
+            return hash.replace(/^(.{8})(.{4})(.{4})(.{4})(.{12}).*$/, '$1-$2-5$3-$4-$5');
+        }
+        
+        function simpleHash(str) {
+            let hash = 0;
+            for (let i = 0; i < str.length; i++) {
+                const char = str.charCodeAt(i);
+                hash = ((hash << 5) - hash) + char;
+                hash = hash & hash;
+            }
+            return Math.abs(hash).toString(16).padStart(32, '0');
+        }
+        
+        function generateGUID() {
+            return generateUUID_v4().toUpperCase();
+        }
+        
+        function formatUUID(uuid, caseFormat, hyphenFormat) {
+            if (hyphenFormat === 'false') {
+                uuid = uuid.replace(/-/g, '');
+            }
+            
+            if (caseFormat === 'upper') {
+                uuid = uuid.toUpperCase();
+            } else {
+                uuid = uuid.toLowerCase();
+            }
+            
+            return uuid;
+        }
+        
+        function generateUUID() {
+            const version = document.getElementById('uuidVersion').value;
+            const caseFormat = document.getElementById('caseFormat').value;
+            const hyphenFormat = document.getElementById('hyphenFormat').value;
+            const namespace = document.getElementById('namespace').value;
+            const name = document.getElementById('name').value;
+            
+            let uuid;
+            
+            switch (version) {
+                case 'v1':
+                    uuid = generateUUID_v1();
+                    break;
+                case 'v4':
+                    uuid = generateUUID_v4();
+                    break;
+                case 'v5':
+                    if (!namespace || !name) {
+                        alert('Namespace dan Name harus diisi untuk UUID v5!');
+                        return;
+                    }
+                    uuid = generateUUID_v5(namespace, name);
+                    break;
+                case 'guid':
+                    uuid = generateGUID();
+                    break;
+                default:
+                    uuid = generateUUID_v4();
+            }
+            
+            uuid = formatUUID(uuid, caseFormat, hyphenFormat);
+            
+            displayResults([uuid]);
+            totalGenerated += 1;
+            updateStats();
+        }
+        
+        function generateBulkUUID() {
+            const version = document.getElementById('uuidVersion').value;
+            const count = parseInt(document.getElementById('uuidCount').value);
+            const caseFormat = document.getElementById('caseFormat').value;
+            const hyphenFormat = document.getElementById('hyphenFormat').value;
+            const namespace = document.getElementById('namespace').value;
+            const name = document.getElementById('name').value;
+            
+            if (version === 'v5' && (!namespace || !name)) {
+                alert('Namespace dan Name harus diisi untuk UUID v5!');
+                return;
+            }
+            
+            const uuids = [];
+            
+            for
